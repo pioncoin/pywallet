@@ -44,6 +44,28 @@ class DashTestNet(object):
     EXT_PUBLIC_KEY = 0x043587CF  # Used to serialize public BIP32 addresses
     EXT_SECRET_KEY = 0x04358394  # Used to serialize private BIP32 addresses
     BIP32_PATH = "m/44'/1'/0'/"
+class PionMainNet(DashMainNet):
+    """Pion MainNet version bytes."""
+    NAME = "Pion Main Net"
+    COIN = "PION"
+    SCRIPT_ADDRESS = 0x30  # int(0x30) = 48
+    PUBKEY_ADDRESS = 0x37  # int(0x47) = 55  # Used to create payment addresses
+    SECRET_KEY = 0xF5      # int(0xF5) = 245  # Used for WIF format
+    EXT_PUBLIC_KEY = 0X0488B21E  # Used to serialize public BIP32 addresses
+    EXT_SECRET_KEY = 0X0488ADE4  # Used to serialize private BIP32 addresses
+    BIP32_PATH = "m/44'/261'/0'/" # https://github.com/satoshilabs/slips/blob/master/slip-0044.md. 261 is coin type for pion
+
+
+class PionTestNet(DashTestNet):
+    """Pion TestNet version bytes."""
+    NAME = "Pion Test Net"
+    COIN = "PION"
+    SCRIPT_ADDRESS = 0x7D  # int(0x7D) = 125
+    PUBKEY_ADDRESS = 76  # int(0x76) = 118  # Used to create payment addresses
+    SECRET_KEY = 0xEF      # int(0xEF) = 239  # Used for WIF format
+    EXT_PUBLIC_KEY = 0x043587CF  # Used to serialize public BIP32 addresses
+    EXT_SECRET_KEY = 0x04358394  # Used to serialize private BIP32 addresses
+    BIP32_PATH = "m/44'/1'/0'/" # All testnet coins have coin type as 1
 
 class OmniMainNet(object):
     """Bitcoin MainNet version bytes.

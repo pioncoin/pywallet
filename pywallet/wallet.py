@@ -83,6 +83,10 @@ def get_network(network='btctest'):
         return DashMainNet
     elif network == "dash_testnet" or network == 'dashtest':
         return DashTestNet
+    elif network == "pion":
+        return PionMainNet
+    elif network == "pion_testnet" or network == 'piontest':
+        return PionTestNet
     elif network == 'omni':
         return OmniMainNet
     elif network == 'omni_testnet':
